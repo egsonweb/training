@@ -1,0 +1,127 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.4;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+#container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #eee;
+  color: #333;
+}
+
+header {
+  overflow: hidden;
+}
+
+header > h1 {
+  float: left;
+}
+
+header > h1 > a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+header > nav {
+  float: right;
+}
+
+nav > ul {
+  list-style: none;
+  overflow: hidden;
+}
+nav > ul > li {
+  float: left;
+  background-color: tomato;
+}
+nav li > a {
+  margin-right: 10px;
+  padding: 12px 20px;
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+
+#masthead {
+  height: 300px;
+  text-align: center;
+  padding-top: 117px;
+  background-color: #ccc;
+}
+#masthead > h2 {
+  font-size: 36px;
+}
+#masthead > p {
+  margin-bottom: 20px;
+}
+#masthead > a {
+  padding: 12px 24px;
+  text-decoration: none;
+  background-color: seagreen;
+  color: white;
+}
+
+#features {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ccc;
+  overflow: hidden;
+}
+#features > .box {
+  width: 260px;
+  height: 300px;
+  padding: 20px;
+  border: 1px #333 solid;
+  margin-right: 20px;
+  background-color: #fff;
+  float: left;
+}
+#features > .box:last-child {
+  margin-right: 0;
+}
+
+footer {
+  background-color: #444;
+  overflow: hidden;
+  color: white;
+}
+footer > p {
+  padding: 8px 12px;
+}
+footer > p:first-child {
+  float: left;
+}
+footer > p:last-child {
+  float: right;
+}
+
+/* Pseudo elements demonstration */
+/*h1 > a {
+  font-size: 24px;
+  color: white;
+}
+h1 > a:after {
+  content: 'Logo';
+  color: midnightblue;
+  display: none;
+}*/
+/*h1 > a > span {
+  color: midnightblue;
+  display: none;
+}
+
+h1 > a:hover > span {
+  display: inline;
+}*/
