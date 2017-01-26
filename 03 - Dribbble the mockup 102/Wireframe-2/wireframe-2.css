@@ -10,7 +10,7 @@ body {
   padding-bottom:100px;
   background-color: #ccc;
   line-height: 1.4;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
 }
 
@@ -24,7 +24,8 @@ body {
   transform: scale(1);
 }
 .profile:hover .profile-image > img {
-  transform: scale(3) rotate(180deg);
+  /*transform: scale(3) rotate(180deg);*/
+  transform: scale(1.2);
 }
 
 .profile-overlay,
@@ -122,12 +123,13 @@ body {
   font-size: 32px;
 }
 
+/* Animation Reference */
 
-.profile-overlay {
+/*.profile-overlay {
   -webkit-animation: 300ms scaleAndFlip;
-}
+}*/
 
-@-webkit-keyframes rotateKitten {
+/*@-webkit-keyframes rotateKitten {
   0% {
     transform: rotate(0);
   }
@@ -154,4 +156,4 @@ body {
     transform: scale(1) rotate(0);
     opacity: 1;
   }
-}
+}*/
