@@ -1,0 +1,157 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-bottom:100px;
+  background-color: #ccc;
+  line-height: 1.4;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+}
+
+.profile {
+  position: relative;
+  width: 380px;
+  margin: 100px auto 0;
+  padding-top: 40px;
+}
+.profile:hover .profile-overlay {
+  transform: scale(1);
+}
+.profile:hover .profile-image > img {
+  transform: scale(3) rotate(180deg);
+}
+
+.profile-overlay,
+.profile-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.profile-overlay {
+  width: 440px;
+  height: 480px;
+  left: -30px;
+  top: 70px;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: scale(0.5);
+  transition: transform 300ms linear;
+  border-radius: 10px;
+  z-index: 99;
+}
+.profile-card {
+  padding: 40px 0 180px;
+  background-color: #fff;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px -30px #000;
+  z-index: 100;
+}
+.profile-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.profile-image > img {
+  margin-bottom: 20px;
+  border-radius: 50%;
+  transition: transform 300ms ease-out;
+  /*animation: 300ms rotateKitten infinite;*/
+  outline: none;
+  border: none;
+}
+.profile-links {
+  margin-bottom: 20px;
+  padding: 0 40px 30px;
+  border-bottom: 1px #ccc solid;
+  display: inline-block;
+}
+.profile-links > i {
+  padding: 0 10px;
+}
+
+
+.profile-info > h2,
+.profile-info  > p {
+  margin-bottom: 10px;
+}
+
+.profile-social {
+  margin-top: 20px;
+  font-size: 24px;
+}
+.profile-social > i {
+  padding: 0 12px;
+  color: #bbb
+}
+
+.profile-inbox,
+.profile-curve {
+  padding: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.profile-inbox {
+  bottom: 0px;
+  z-index: 100;
+}
+.profile-curve {
+  height: 300px;
+  bottom: -140px;
+  background-color: #09C;
+  border-radius: 52%;
+  z-index: 99
+}
+.profile-inbox > p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+.profile-inbox > p > i {
+  font-size: 32px;
+}
+
+
+.profile-overlay {
+  -webkit-animation: 300ms scaleAndFlip;
+}
+
+@-webkit-keyframes rotateKitten {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes scaleAndFlip {
+  0% {
+    transform: scale(0.5) rotate(180deg);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(0.75) rotate(90deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}

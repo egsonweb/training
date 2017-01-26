@@ -1,0 +1,38 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.4;
+}
+
+#wrapper {
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#wrapper > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  color: #ffffff;
+}
+
+#wrapper > div:first-child {
+  top: 20px;
+  background-color: seagreen;
+  z-index: 100;
+}
+#wrapper > div:last-child {
+  background-color: tomato;
+  z-index: 99;
+}
+p {
+  font-size: 900px;
+}
