@@ -1,0 +1,35 @@
+.container-fluid {
+  width: 900px;
+  margin: 0 auto;
+}
+
+#wrapper {
+  /*width: 900px;*/
+  margin: 0 auto;
+}
+
+#masthead {
+  text-align: center;
+}
+
+.navbar-default .navbar-brand {
+  color: #333;
+}
+
+.navbar-default .navbar-nav>li>a {
+  background-color: tomato;
+  color: white;
+}
+
+#features .box {
+  padding: 20px;
+}
+
+footer {
+  padding: 10px 0;
+  background-color: #333;
+}
+footer p {
+  margin: 0;
+  color: white;
+}

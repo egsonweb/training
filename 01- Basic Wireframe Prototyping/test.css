@@ -13,7 +13,7 @@ body {
 }
 
 #container {
-  width: 900px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   background-color: #eee;
@@ -124,4 +124,29 @@ h1 > a:after {
 
 h1 > a:hover > span {
   display: inline;
+}*/
+
+/* Media Query Example */
+@media screen and (min-width: 767px) {
+  #container {
+    width: 700px;
+  }
+}
+
+/*@media screen and (min-width: 400px) {
+  #container {
+    width: 100%;
+  }
+  header > nav {
+    display: none;
+  }
+  #masthead > p {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  #features > .box {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px;
+  }
 }*/
