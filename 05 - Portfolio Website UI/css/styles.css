@@ -1,0 +1,294 @@
+body {
+  line-height: 1.4;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.title {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.dark {
+  color: #fff;
+}
+.title.dark:after {
+  background-color: #fff;
+}
+.title:after {
+  content: ' ';
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background-color: #333;
+}
+.title+p {
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+.next {
+  padding: 8px 4px;
+  display: inline-block;
+  border: 1px #333 solid;
+}
+
+header {
+  position: relative;
+}
+
+.navbar {
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  right: 100px;
+  background-color: transparent;
+  border: none;
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+.navbar-default .navbar-nav > li > a {
+  margin-right: 40px;
+  text-transform: uppercase;
+  font-weight: 400px;
+  font-size: 16px;
+}
+.navbar-default .navbar-nav > li:last-child > a {
+  margin-right: 0;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: #fff;
+  border-radius: 4px;
+  color: #333;
+}
+
+#masthead {
+  padding: 90px 0;
+  background: #333 url('../img/masthead-bg.jpg') center top no-repeat;
+  background-size: cover;
+}
+#masthead > .container-fluid {
+  width: 60%;
+}
+#masthead .jumbotron {
+  background-color: transparent;
+  text-align: center;
+  color: white;
+}
+
+.jumbotron h1 {
+  margin-bottom: 40px;
+  font-weight: 100;
+}
+.jumbotron p {
+  font-weight: 200;
+  font-size: 18px;
+}
+.jumbotron .explore {
+  margin-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#meet {
+  padding: 30px 0;
+  text-align: center;
+}
+#meet > .container-fluid {
+  width: 60%;
+}
+
+#video {
+  height: 280px;
+  position: relative;
+  background: #333 url('../img/play-bg.jpg') center center no-repeat;
+  background-size: cover;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0, 0.75);
+  z-index: 99;
+}
+.play {
+  color: white;
+  font-size: 90px;
+  left: 50%;
+  top: 50%;
+  margin-left: -35px;
+  margin-top: -45px;
+  position: absolute;
+  z-index: 100;
+}
+
+#services {
+  padding: 30px 0;
+  text-align: center;
+}
+#services > .container-fluid {
+  width: 80%;
+}
+.service {
+  padding: 20px;
+  height: 240px;
+  border: 1px #333 solid;
+}
+.service .icon {
+  font-size: 32px;
+}
+
+#checkout {
+  padding: 40px 0;
+  background-color: #222;
+  text-align: center;
+}
+.checkout {
+  background-color: transparent;
+  border-radius: 0;
+  text-transform: uppercase;
+  border: 1px #faceda solid;
+  font-size: 18px;
+  color: white;
+}
+
+#projects {
+  padding: 40px 0;
+  text-align: center;
+}
+#projects > .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+#projects .col-lg-3 {
+  padding: 0;
+}
+.project {
+  position: relative;
+  height: 287px;
+}
+.project:hover > .info {
+  display: block;
+}
+.project .image,
+.project .info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.project .info {
+  padding-top: 100px;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  color: white;
+}
+
+.dribbble {
+  width: 300px;
+  margin: 40px auto;
+}
+.dribbble a {
+  padding: 12px 24px;
+  background-color: #333;
+  border-radius: 0;
+  color: white;
+  display: block;
+}
+.project .next {
+  display: block;
+}
+
+#partners {
+  height: 300px;
+  padding: 40px 0;
+  background: #333 url('../img/partners-bg.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.partner-info > .container-fluid {
+  width: 60%;
+}
+
+.partner-info {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right:0;
+  bottom:0;
+  z-index: 10000;
+}
+
+
+#about {
+  padding: 40px 0;
+  text-align: center;
+}
+#about .container-fluid {
+  width: 60%;
+}
+
+#about .role {
+  height: 300px;
+  padding: 30px;
+  border: 1px #333 solid;
+}
+.role > img {
+  width: 70%;
+  height: auto;
+  display: inline-block;
+  margin-bottom: 30px;
+  border-radius: 50%;
+}
+#about .role.last {
+  padding-top: 100px;
+}
+.role.last p > i {
+  font-size: 32px;
+}
+
+
+#contact {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #333;
+}
+
+#contact > .container-fluid {
+  width: 80%;
+}
+
+#contact .address {
+  text-align: left;
+  color: white;
+}
+
+.social {
+  text-align: left;
+}
+.social i {
+  font-size: 32px;
+  color: white;
+}
+
+
+@media screen and (max-width: 400px) {
+  #masthead > .container-fluid {
+    width: 100%;
+  }
+  .service {
+    margin-bottom: 20px;
+    height: auto;
+  }
+}
