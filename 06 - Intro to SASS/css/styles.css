@@ -1,0 +1,30 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: "border-box"; }
+
+#wrapper {
+  width: 100%;
+  margin: 0 auto; }
+
+.container {
+  width: 100%; }
+
+header .container {
+  width: 300px;
+  overflow: hidden; }
+header h1 {
+  float: left; }
+header ul {
+  float: right; }
+
+#features .container {
+  width: 800px;
+  margin: 0 auto; }
+
+footer .container {
+  width: 100%; }
+
+/*# sourceMappingURL=styles.css.map */

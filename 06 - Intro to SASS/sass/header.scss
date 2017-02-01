@@ -1,0 +1,14 @@
+header {
+  .container {
+    @include container(300px);
+    overflow: hidden;
+  }
+
+  h1 {
+    @include float;
+  }
+
+  ul {
+    @include float(right);
+  }
+}

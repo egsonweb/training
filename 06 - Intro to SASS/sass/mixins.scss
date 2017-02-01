@@ -1,0 +1,17 @@
+@mixin container($w: 100%, $c: false) {
+  width: $w;
+  @if $c {
+    margin: 0 auto;
+  }
+}
+
+@mixin reset($bs: 'border-box') {
+  margin: 0;
+  padding: 0;
+  box-sizing: $bs;
+}
+
+
+@mixin float($f: left) {
+  float: $f;
+}
