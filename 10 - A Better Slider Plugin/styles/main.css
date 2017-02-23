@@ -14,8 +14,8 @@ body {
 
 #wrapper {
     margin: 0 auto;
+    padding-top: 60px;
     width: 900px;
-    background-color: #fff;
 }
 
 .image-slider {
@@ -29,11 +29,15 @@ body {
 }
 
 .features {
-    width: 300px;
+    width: 600px;
     height: 200px;
     margin: 40px auto 0;
+    background-color: #333;
 }
 
 .features .slider-item {
-    width: 100%;
+    /*width: 100%;*/
+    height: auto;
+    padding: 30px;
+    color: #fff;
 }

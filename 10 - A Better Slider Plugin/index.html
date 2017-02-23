@@ -6,54 +6,51 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="plugins/slider.css"/>
     <link rel="stylesheet" href="styles/main.css"/>
 </head>
 <body>
 <div id="wrapper">
     <div class="slider image-slider">
+        <div class="slider-dots">
+            <ol>
+                <li data-slide-to="0"></li>
+                <li data-slide-to="1"></li>
+                <li data-slide-to="2"></li>
+                <li data-slide-to="3"></li>
+            </ol>
+        </div>
         <div class="slider-inner">
             <div class="slider-item">
                 <img src="http://placehold.it/800x400?text=Slide-1" alt="Slide 1"/>
-                <div class="slider-caption">
-                    <h2>Slide-1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse maiores necessitatibus nesciunt
-                        nihil quo reprehenderit sed voluptas! Amet architecto deserunt et iste maxime nesciunt provident
-                        quaerat quam qui saepe, veritatis!</p>
-                </div>
             </div>
             <div class="slider-item">
                 <img src="http://placehold.it/800x400?text=Slide-2" alt="Slide 2"/>
-                <div class="slider-caption">
-                    <h2>Slide-2</h2>
-                    <p>Lo</div>
-                rem ipsum dolor sit amet, consectetur adipisicing elit. Esse maiores necessitatibus nesciunt nihil quo
-                reprehenderit sed voluptas! Amet architecto deserunt et iste maxime nesciunt provident quaerat quam qui
-                saepe, veritatis!</p>
             </div>
             <div class="slider-item">
                 <img src="http://placehold.it/800x400?text=Slide-3" alt="Slide 3"/>
-                <div class="slider-caption">
-                    <h2>Slide-3</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse maiores necessitatibus nesciunt
-                        nihil quo reprehenderit sed voluptas! Amet architecto deserunt et iste maxime nesciunt provident
-                        quaerat quam qui saepe, veritatis!</p>
-                </div>
             </div>
             <div class="slider-item">
                 <img src="http://placehold.it/800x400?text=Slide-4" alt="Slide 4"/>
-                <div class="slider-caption">
-                    <h2>Slide-4</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse maiores necessitatibus nesciunt
-                        nihil quo reprehenderit sed voluptas! Amet architecto deserunt et iste maxime nesciunt provident
-                        quaerat quam qui saepe, veritatis!</p>
-                </div>
             </div>
         </div>
+        <a href="#" class="slider-control prev" data-slide="prev">
+            <span class="fa fa-chevron-left"></span>
+        </a>
+        <a href="#" class="slider-control next" data-slide="next">
+            <span class="fa fa-chevron-right"></span>
+        </a>
     </div>
     <div class="features">
         <div class="slider">
-            <div class="slider-dots"></div>
+            <div class="slider-dots">
+                <ol>
+                    <li data-slide-to="0"></li>
+                    <li data-slide-to="1"></li>
+                    <li data-slide-to="2"></li>
+                </ol>
+            </div>
             <div class="slider-inner">
                 <div class="slider-item">
                     <div>
@@ -78,6 +75,12 @@
                     </div>
                 </div>
             </div>
+            <a href="#" class="slider-control prev" data-slide="prev">
+                <span class="fa fa-chevron-left"></span>
+            </a>
+            <a href="#" class="slider-control next" data-slide="next">
+                <span class="fa fa-chevron-right"></span>
+            </a>
         </div>
     </div>
 </div>

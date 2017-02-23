@@ -3,89 +3,100 @@
 })(function ($) {
     $.fn.slider = function (opts) {
         var defaults = {
-            dots: false,
-            auto: false,
-            milli: 600
+            dots: false
         };
 
-        var options = $.extend(defaults, opts);
+        var options = $.extend({}, defaults, opts);
 
         return this.each(function () {
             var $slider = $(this);
             var $sliderInner = $slider.find('.slider-inner');
             var $sliderItems = $sliderInner.find('.slider-item');
+            var $sliderControl = $slider.find('.slider-control');
+            var $sliderDots = $slider.find('.slider-dots');
+            var $sliderIndicator = $sliderDots.find('li');
 
             var currentSlide = 0;
             var numberOfSlides = $sliderItems.length;
-            var itemWidth = $sliderInner.find('.slider-item').first().width();
+            var itemWidth = $sliderInner.find('.slider-item').first().outerWidth();
             var innerWidth = itemWidth * numberOfSlides;
 
-            var $prev = $('<a />').attr({
-                href: '#prev'
-            }).text('Previous').addClass('slider-prev');
-            var $next = $('<a />').attr({
-                href: '#next'
-            }).text('Next').addClass('slider-next');
-            $slider.append($prev).append($next);
+            $sliderInner.css({
+                width: innerWidth,
+                overflow: 'hidden'
+            });
+            $sliderItems.each(function (index, slide) {
+                var $slide = $(slide);
+                $slide.outerWidth(itemWidth);
+            });
 
+            // OPTIMIZED WAY:
+            // Single Event handler for both
+            // prev and next buttons
+            $sliderControl.on('click', function(e) {
+                // Prevent the default event
+                e.preventDefault();
+
+                // Cache the control button (Prev or Next)
+                var $control = $(this);
+
+                // Grab the direction data from the button
+                // to figure out if prev or next was clicked
+                var dir = $control.data('slide');
+
+                // Store the value of current slide
+                var pos = currentSlide;
+
+                // Decide whether to add/subtract one to current
+                // based on the direction of the button clicked
+                pos += (~~(dir === 'next') || -1);
+
+                // Normalize the current slide value
+                currentSlide = (pos < 1) ? numberOfSlides - 1 : pos%numberOfSlides;
+
+                // Move the slide
+                move(currentSlide);
+            });
+
+
+            // Check for dots key on options
+            // and then hide/bind events.
             if (options.dots) {
-                var $dots = $('<ol class="slider-dots" />');
-                for (var i = 0; i < numberOfSlides; i++) {
-                    var $dotItem = $('<li />').attr('data-number', i);
-                    $dotItem.on('click', function () {
-                        var $item = $(this);
-                        var itemNumber = $item.data('number');
-                        $sliderInner.css({
-                            marginLeft: -itemNumber * itemWidth + 'px'
-                        })
-                    });
-                    $dots.append($dotItem);
-                }
+                // Add active to the first dot
+                $sliderIndicator.eq(0).addClass('active');
 
-                $slider.prepend($dots);
+                // Move to slide when clicked
+                $sliderIndicator.on('click', function() {
+                    var $dot = $(this);
+
+                    // Get the slide index from data attribute
+                    // of the slide dot indicator
+                    // Set the current slide to the slide index
+                    currentSlide = $dot.data('slide-to');
+
+                    // Add necessary classes to show active dot
+                    $sliderIndicator.removeClass('active');
+                    $dot.addClass('active');
+
+                    // Move to the current slide
+                    move(currentSlide);
+                });
+            } else {
+                $sliderDots.css({
+                    display: 'none'
+                });
             }
 
 
-            $sliderInner.width(innerWidth);
-            $sliderItems.each(function (index, slide) {
-                var $slide = $(slide);
-                $slide.width(itemWidth);
-            });
-
-            $prev.on('click', function (e) {
-                e.preventDefault();
-                currentSlide -= 1;
-                if (currentSlide < 0) {
-                    currentSlide = numberOfSlides - 1;
-                }
+            /**
+             * Function to move the slide
+             * @param slideIndex
+             */
+            function move(slideIndex) {
                 $sliderInner.css({
-                    marginLeft: -currentSlide * itemWidth + 'px'
-                })
-            });
-
-            $next.on('click', function (e) {
-                e.preventDefault();
-                currentSlide += 1;
-                if (currentSlide > numberOfSlides - 1) {
-                    currentSlide = currentSlide % numberOfSlides;
-                }
-                $sliderInner.css({
-                    marginLeft: -currentSlide * itemWidth + 'px'
-                })
-            });
-
-            // if (options.auto) {
-            //     var interval;
-            //     interval = setInterval(function () {
-            //         $next.trigger('click');
-            //     }, options.milli);
-            //
-            //     $slider.on('mouseover', function () {
-            //         clearInterval(interval);
-            //     });
-            // }
-
-
+                    marginLeft: -slideIndex * itemWidth + 'px'
+                });
+            }
         });
     };
 });
