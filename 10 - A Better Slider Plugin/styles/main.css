@@ -1,0 +1,39 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 900px;
+    background-color: #fff;
+}
+
+.image-slider {
+    height: 400px;
+}
+
+.image-slider .slider-item > img {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.features {
+    width: 300px;
+    height: 200px;
+    margin: 40px auto 0;
+}
+
+.features .slider-item {
+    width: 100%;
+}
