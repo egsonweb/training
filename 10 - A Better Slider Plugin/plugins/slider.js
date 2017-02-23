@@ -82,9 +82,14 @@
                     move(currentSlide);
                 });
             } else {
-                $sliderDots.css({
-                    display: 'none'
-                });
+                // $sliderDots.css({
+                //     display: 'none'
+                // });
+
+                // A much more advanced way of doing
+                // since we don't want to keep things
+                // in the DOM which aren't being used
+                $sliderDots.remove();
             }
 
 
