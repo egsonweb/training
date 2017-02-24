@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Slider Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/animate.css@3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="scripts/plugins/dropdown.css"/>
+    <link rel="stylesheet" href="scripts/plugins/slider.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+</head>
+<body>
+<div id="wrapper">
+    <div class="slider image-slider">
+        <div class="slider-dots">
+            <ol>
+                <li data-slide-to="0"></li>
+                <li data-slide-to="1"></li>
+                <li data-slide-to="2"></li>
+                <li data-slide-to="3"></li>
+            </ol>
+        </div>
+        <div class="slider-inner">
+            <div class="slider-item animated">
+                <img src="http://placehold.it/900x400?text=Slide-1" alt="Slide 1"/>
+            </div>
+            <div class="slider-item animated">
+                <img src="http://placehold.it/900x400?text=Slide-2" alt="Slide 2"/>
+            </div>
+            <div class="slider-item animated">
+                <img src="http://placehold.it/900x400?text=Slide-3" alt="Slide 3"/>
+            </div>
+            <div class="slider-item animated">
+                <img src="http://placehold.it/900x400?text=Slide-4" alt="Slide 4"/>
+            </div>
+        </div>
+        <a href="#" class="slider-control prev" data-slide="prev">
+            <span class="fa fa-chevron-left"></span>
+        </a>
+        <a href="#" class="slider-control next" data-slide="next">
+            <span class="fa fa-chevron-right"></span>
+        </a>
+    </div>
+
+    <div class="filter-list cf">
+        <div class="select-os dropdown">
+            <a class="dropdown-selected" href="#">
+                <span class="dropdown-text">Please select an operating system</span>
+                <span class="dropdown-icon fa fa-chevron-down"></span>
+            </a>
+            <ul class="dropdown-list animated">
+                <li><a class="dropdown-item" href="#">Linux</a></li>
+                <li><a class="dropdown-item" href="#">Windows</a></li>
+                <li><a class="dropdown-item" href="#">Macintosh</a></li>
+                <li><a class="dropdown-item" href="#">Unix</a></li>
+            </ul>
+        </div>
+
+        <div class="select-gender dropdown">
+            <a class="dropdown-selected" href="#">
+                <span class="dropdown-text">Please select gender</span>
+                <span class="dropdown-icon fa fa-chevron-down"></span>
+            </a>
+            <ul class="dropdown-list animated">
+                <li><a class="dropdown-item" href="#">Male</a></li>
+                <li><a class="dropdown-item" href="#">Female</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<script src="https://unpkg.com/jquery@3.1.1/dist/jquery.slim.js"></script>
+<script src="scripts/plugins/slider.js"></script>
+<script src="scripts/plugins/dropdown.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+</html>

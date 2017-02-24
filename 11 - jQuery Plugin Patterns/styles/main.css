@@ -1,0 +1,72 @@
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+body {
+    background-color: #eee;
+}
+
+#wrapper {
+    margin: 0 auto;
+    padding-top: 60px;
+    width: 900px;
+}
+
+.image-slider {
+    height: 400px;
+}
+.image-slider .slider-item {
+    width: 100%;
+    animation-name: fadeOut;
+    animation-duration: 600ms;
+}
+.image-slider .slider-item.active {
+    animation-name: fadeIn;
+}
+.image-slider .slider-item > img {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.filter-list {
+    width: 100%;
+    margin: 40px auto 0;
+    padding: 20px;
+    background-color: #ccc;
+}
+.filter-list .dropdown {
+    float: left;
+    width: 49%;
+    margin-right: 2%;
+}
+.filter-list .dropdown:last-child {
+    margin-right:0;
+}
+
+
+

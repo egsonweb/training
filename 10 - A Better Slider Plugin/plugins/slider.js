@@ -54,6 +54,7 @@
                 // Normalize the current slide value
                 currentSlide = (pos < 1) ? numberOfSlides - 1 : pos%numberOfSlides;
 
+                console.log(currentSlide);
                 // Move the slide
                 move(currentSlide);
             });
