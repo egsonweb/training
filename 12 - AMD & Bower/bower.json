@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "homepage": "https://github.com/egsonweb/training",
+  "authors": [
+    "whoisandie <rjn143@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "requirejs": "^2.3.3",
+    "animate.css": "^3.5.2",
+    "font-awesome": "fontawesome#^4.7.0"
+  }
+}

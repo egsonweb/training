@@ -41,11 +41,11 @@ body {
 }
 .image-slider .slider-item {
     width: 100%;
-    animation-name: fadeOut;
+    animation-name: zoomOut;
     animation-duration: 600ms;
 }
 .image-slider .slider-item.active {
-    animation-name: fadeIn;
+    animation-name: zoomIn;
 }
 .image-slider .slider-item > img {
     width: 100%;
