@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .complete {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <input type="text" id="todo-input" placeholder="What needs to be done?" />
+        <ul id="todo-list"></ul>
+    </div>
+    <script type="text/x-handlebars-template" id="card-template">
+        {{#each this}}
+        <li class="todo-item {{#if completed}}complete{{/if}}" data-id="{{ id }}">
+            <input type="checkbox" class="toggle" {{#if completed}}checked{{/if}} >
+            <label>{{ title }}</label>
+            <button type="button" class="delete">X</button>
+        </li>
+        {{/each}}
+    </script>
+    <script src="bower_components/requirejs/require.js" data-main="scripts/main"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "13 - jQuery Todo List",
+  "homepage": "https://github.com/egsonweb/training",
+  "authors": [
+    "whoisandie <rjn143@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.3.3",
+    "jquery": "^3.1.1",
+    "handlebars": "^4.0.5"
+  }
+}
