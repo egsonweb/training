@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="wrapper" ng-app="todos" ng-cloak ng-controller="MainController">
+        <div id="one" ng-controller="oneController">
+            <h1 ng-bind="'ABC'"></h1>
+            <p ng-click="showMessage()">Click me</p>
+        </div>
+        <div id="two" ng-controller="twoController">
+            <div class="my-awesome-directive-here"></div>
+            <p ng-click="click()">Contact rootScope</p>
+        </div>
+
+
+        <!--<p> {{ 2+2 }} - {{ 7*9 }}</p>-->
+        <!--<input type="text" ng-model="name" />-->
+        <!--<p>{{ name }}</p>-->
+    </div>
+    <script src="https://unpkg.com/angular@1.6.3/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

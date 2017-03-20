@@ -1,0 +1,18 @@
+<div class="movies" ng-controller="MoviesCtrl as mc">
+    <h1>Movie Browser</h1>
+    <div class="movie-input">
+        <form ng-submit="mc.printMovieName()">
+            <input type="text" ng-model="mc.movieName">
+        </form>
+        <p ng-if="mc.loading">Loading...</p>
+        <div class="movie" ng-repeat="movie in mc.moviesList" ng-if="!mc.loading">
+            <h2>{{ movie.title }}</h2>
+            <p>{{ movie.overview }}</p>
+            <ul>
+                <li>{{ movie.popularity }}</li>
+                <li>{{ movie.vote_count }}</li>
+                <li>{{ movie.vote_average }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
