@@ -11,3 +11,97 @@
 body {
 
 }
+
+.movies {
+  width: 960px;
+  margin: 40px auto 0;
+  text-align: center;
+  .movies-input {
+    text-align: center;
+    input[type="text"] {
+      width: 100%;
+      border: none;
+      padding: 8px 16px;
+      outline: none;
+      border: 1px #ccc solid;
+      border-radius: 2px;
+      margin-bottom: 40px;
+    }
+  }
+  .movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 8px;
+  }
+}
+
+.movie {
+  width: 180px;
+  height: 274px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &:hover .movie-title {
+    opacity: 1
+  }
+  .movie-image,
+  .movie-title {
+    width: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .movie-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #ccc;
+  }
+  .movie-title {
+    padding: 20px;
+    background-color: rgba(0,0,0, 0.5);
+    opacity: 0;
+    transition: opacity ease 400ms;
+    h2 {
+      color: #ffffff;
+    }
+  }
+}
+
+/* The starting CSS styles for the enter animation */
+.fade.ng-enter {
+transition:0.5s linear all;
+opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+opacity:1;
+}
+
+.my-animation.ng-enter {
+  /* standard transition code */
+  transition: 1s linear all;
+  opacity:0;
+}
+.my-animation.ng-enter-stagger {
+  /* this will have a 100ms delay between each successive leave animation */
+  transition-delay: 0.2s;
+
+  /* As of 1.4.4, this must always be set: it signals ngAnimate
+    to not accidentally inherit a delay property from another CSS class */
+  transition-duration: 0s;
+
+  /* if you are using animations instead of transitions you should configure as follows:
+    animation-delay: 0.1s;
+    animation-duration: 0s; */
+}
+.my-animation.ng-enter.ng-enter-active {
+  /* standard transition styles */
+  opacity:1;
+}
