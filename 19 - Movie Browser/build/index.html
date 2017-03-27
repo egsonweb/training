@@ -5,16 +5,33 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body ng-app="app">
     <div id="wrapper">
-        <movies></movies>
+        <nav class="navbar-default navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">Brand</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#!/">Home</a></li>
+                        <li><a href="#!/movies">Movies</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <ng-view></ng-view>
+        <!-- <movies></movies> -->
     </div>
     <script src="https://unpkg.com/angular@1.6.3/angular.min.js"></script>
     <script src="https://unpkg.com/angular-animate@1.6.3/angular-animate.min.js"></script>
+    <script src="https://unpkg.com/angular-route@1.6.3/angular-route.min.js"></script>
 
     <!-- load movies module -->
     <script src="js/movies/movies.js"></script>

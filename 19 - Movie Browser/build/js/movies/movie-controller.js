@@ -17,11 +17,14 @@
 
       function printMovieName() {
           vm.loading = true
-          ABC.getMovies(vm.movieName).then(function(response) {
-              vm.loading = false;
-              vm.moviesList = response.data.results;
-              vm.movieName = '';
-          });
+          $timeout(function() {
+            ABC.getMovies(vm.movieName).then(function(response) {
+                vm.loading = false;
+                vm.moviesList = response.data.results;
+                vm.movieName = '';
+            });
+          }, 3000);
+
       }
   }
 })();

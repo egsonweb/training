@@ -1,22 +1,33 @@
 <div class="movies" ng-controller="MoviesCtrl as mc">
-    <h1>Movie Browser</h1>
-    <div class="movies-input">
-        <form ng-submit="mc.printMovieName()">
-            <input type="text" ng-model="mc.movieName" placeholder="Search for a movie here!">
-        </form>
-    </div>
-    <p class="fade" ng-if="mc.loading">Loading...</p>
-    <div class="movies-list" ng-if="!mc.loading">
-        <div class="movie my-animation" ng-repeat="movie in mc.moviesList">
-            <div class="movie-image" ng-if="movie.poster_path">
-              <img ng-src="{{ 'http://image.tmdb.org/t/p/w185' + movie.poster_path }}" alt="{{ movie.title }}">
-            </div>
-            <div class="movie-image" ng-if="!movie.poster_path">
-                <img ng-src="http://placehold.it/185x274?text=NA" alt="NA">
-            </div>
-            <div class="movie-title">
-                <h2>{{ movie.title | truncate }}</h2>
-            </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3">
+          <sidebar></sidebar>
         </div>
+        <div class="col-lg-9">
+          <div class="movies-input">
+              <form ng-submit="mc.printMovieName()">
+                  <input type="text" ng-model="mc.movieName" placeholder="Search for a movie here!">
+              </form>
+          </div>
+          <div class="loader" ng-if="mc.loading">
+              <span class="spinner"></span>
+              Loading...
+          </div>
+          <div class="movies-list">
+              <div class="movie" ng-repeat="movie in mc.moviesList">
+                  <div class="movie-image" ng-if="movie.poster_path">
+                    <img ng-src="{{ 'http://image.tmdb.org/t/p/w185' + movie.poster_path }}" alt="{{ movie.title }}">
+                  </div>
+                  <div class="movie-image" ng-if="!movie.poster_path">
+                      <img ng-src="http://placehold.it/185x274?text=NA" alt="NA">
+                  </div>
+                  <div class="movie-title">
+                      <h2>{{ movie.title }}</h2>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
     </div>
 </div>
