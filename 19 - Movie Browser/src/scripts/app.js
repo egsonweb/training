@@ -19,7 +19,7 @@
                     template: '<h1>Hello there!</h1>'
                 })
                 .when('/movies', {
-                    template: '<movies></movies>'
+                    template: '<movies title="Search here!"></movies>'
                 })
                 .otherwise({
                     template: '<not-found></not-found>'
